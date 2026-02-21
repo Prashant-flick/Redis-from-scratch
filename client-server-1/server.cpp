@@ -38,6 +38,7 @@ int main() {
     addr.sin_family = AF_INET;
     addr.sin_port = htons(1234);        // port
     addr.sin_addr.s_addr = htonl(0);    // wildcard IP 0.0.0.0
+    //bind
     int rv = bind(fd, (const struct sockaddr *)&addr, sizeof(addr));
     printf("bind() returned: %d\n", rv);
     if (rv != 0) {
